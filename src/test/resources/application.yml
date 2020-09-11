@@ -1,0 +1,51 @@
+error:
+  debug: true
+
+management:
+  security:
+    enabled: false
+
+cron: 
+  create:
+      timeSheet: 0/5 * * * * *
+###
+#   Database Settings
+###
+spring:
+  datasource:
+    url: jdbc:h2:mem:gcmdb;MODE=PostgreSQL;DB_CLOSE_ON_EXIT=FALSE
+    platform: h2
+    username: root
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: trueCredocImportService
+  ###
+  #   H2 Settings
+  ###
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false
+  #It looks like there's a bug in Keycloak's Spring Security integration
+  #https://stackoverflow.com/questions/53318134/unable-to-use-keycloak-in-spring-boot-2-1-due-to-duplicated-bean-registration-ht
+  main:
+    allow-bean-definition-overriding: true
+######
+keycloak:
+  realm: gcm
+  auth-server-url: http://localhost:8080/auth
+  bearer-only: true
+  ssl-required: none
+  resource: BureauEtude-backend-client
+  use-resource-role-mappings: false

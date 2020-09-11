@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+    <!-- Inherite from spring default logging -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <!-- Declarinng global properties-->
+    <!-- Application Name Property -->
+    <springProperty scope="context" name="appName" source="spring.application.name"/>
+    <!-- Application Name Property -->
+    <property name="default_charset" value="UTF-8"/>
+    <!-- Console log property -->
+    <property name="CONSOLE_LOG_PATTERN"
+              value="%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n"/>
+
+    <!-- apenders configuration -->
+    <!-- 1/- Append into console -->
+    <appender name="CONSOLE_LOG" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                <charset>${default_charset}</charset>
+                ${CONSOLE_LOG_PATTERN}
+            </Pattern>
+        </encoder>
+    </appender>
+
+    <!-- default profile root to Apply-->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE_LOG"/>
+    </root>
+</configuration>

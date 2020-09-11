@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+    <!-- Inherite from spring default logging -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <springProperty scope="context" name="appName" source="spring.application.name"/>
+    <!-- Application Name Property -->
+    <property name="default_charset" value="UTF-8"/>
+    <property name="CONSOLE_LOG_PATTERN"
+              value="%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%-5level) %clr([${appName:-}, trace: %X{X-B3-TraceId:-}, span: %X{X-B3-SpanId:-}]){yellow} %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n %clr(${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}){red}"/>
+    <!-- File log Pattern property -->
+    <property name="FILE_LOG_PATTERN"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [${appName:-}, trace: %X{X-B3-TraceId:-}, span: %X{X-B3-SpanId:-}] ${PID:- } --- [%15.15t] %-40.40logger{39} : %m%n ${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+
+    <!-- Appenders -->
+    <appender name="CONSOLE_LOG" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                <charset>${default_charset}</charset>
+                ${CONSOLE_LOG_PATTERN}
+            </Pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${user.home}/logs/BureauEtude-backend.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- CAUTION! : daily rollover. Make sure the path matches the one in the file element or else
+                               the rollover logs are placed in the working directory. -->
+            <fileNamePattern>${user.home}/logs/gcm-backend/gcm-backend_%d{yyyy-MM-dd}.%i.log
+            </fileNamePattern>
+
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>5MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <!-- keep 30 days' worth of history -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <charset>${default_charset}</charset>
+            <pattern>
+                ${FILE_LOG_PATTERN}
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!-- Applying Console Appenders for default/local environement -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE_LOG"/>
+    </root>
+
+    <!-- Applying FILE Appenders for external environement -->
+    <springProfile name="!default">
+        <root level="INFO">
+            <appender-ref ref="FILE"/>
+        </root>
+    </springProfile>
+
+</configuration>
+

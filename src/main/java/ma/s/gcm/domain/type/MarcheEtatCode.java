@@ -1,0 +1,9 @@
+package ma.s.gcm.domain.type;
+
+public enum MarcheEtatCode {
+	ENCOURS,
+	RECEPTION_PROVISOIRE,
+	RECEPTION_CAUTION_DEFINITIVE,
+	RECEPTION_RETENU_GARANTI
+}
+

@@ -1,0 +1,1662 @@
+{
+	"info": {
+		"_postman_id": "20d5f567-0ded-4b81-af7c-1fc02a5011ab",
+		"name": "bureauEtude",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "fonction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\":\"Diecteur generale22\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/fonction/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"fonction",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fonction",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\":\"Chef de projet\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/fonction/58",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"fonction",
+						"58"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fonction",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 55,\r\n        \"nom\": \"Directeur de projet\"\r\n    }"
+				},
+				"url": {
+					"raw": "localhost:7777/fonction/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"fonction",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fonctions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\":\"Chef de projet\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/fonction/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"fonction",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employees",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\":\"Chef de projet\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/Employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"Employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "etablissement financier",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\":\"Chef de projet\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/Employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"Employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "etablissement financier",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"nom\": \"xxxxxxxxxxxx\",\r\n        \"abreviation\": \"xxxx\",\r\n        \"adresse\": \"xxxxx\",\r\n        \"telephone\": \"06558888\",\r\n        \"fixe\": \"0548487\",\r\n        \"faxe\": \"05998989\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:7777/etabli/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"etabli",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "etablissement financier",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\":\"Chef de projet\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/etabli/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"etabli",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "etablissement financier",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nom\":\"xxx\",\r\n\t\"abreviation\":\"xxxx\",\r\n\t\"adresse\":\"xxxxx\",\r\n\t\"telephone\":\"06558888\",\r\n\t\"fixe\":\"0548487\",\r\n\t\"faxe\":\"05998989\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/etabli/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"etabli",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Intervenants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\":\"Chef de projet\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/intervenant/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"intervenant",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Intervenant",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"natureActivite\":\"Topographe\",\r\n    \"type\":\"physique\",\r\n    \"nom\":\"\",\r\n    \"prenom\":\"\",\r\n    \"NumCIN\":\"\",\r\n    \"telephone\":\"\",\r\n    \"email\":\"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/intervenant/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"intervenant",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Intervenant",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"natureActivite\":\"Topographe\",\r\n    \"type\":\"physique\",\r\n    \"nom\":\"\",\r\n    \"prenom\":\"\",\r\n    \"NumCIN\":\"\",\r\n    \"telephone\":\"\",\r\n    \"email\":\"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/intervenant/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"intervenant",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Intervenant",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"natureActivite\":\"Topographe\",\r\n    \"type\":\"physique\",\r\n    \"nom\":\"\",\r\n    \"prenom\":\"\",\r\n    \"NumCIN\":\"\",\r\n    \"telephone\":\"\",\r\n    \"email\":\"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/intervenant/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"intervenant",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"H123333\",\r\n        \"nom\": \"mm\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cin\":\"h111\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\"\r\n        \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/Employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"Employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Maitre d'ouvrage",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/Employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"Employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "villes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/ville",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"ville"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "congés",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/conge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"conge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "congé",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/conge/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"conge",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "congé",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 1,\r\n        \"debutPeriode\": \"2020-01-01T00:00:00.000+00:00\",\r\n        \"finPeriode\": \"2020-01-06T00:00:00.000+00:00\",\r\n        \"emlpoyee\": null,\r\n        \"duree\": 4\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:7777/conge/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"conge",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "congé",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/conge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"conge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ville",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/ville",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"ville"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ville",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1702,\r\n        \"nom\": \"Nador\"\r\n        \r\n    } "
+				},
+				"url": {
+					"raw": "http://localhost:7777/ville",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"ville"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ville",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1702,\r\n        \"nom\": \"Nador\"\r\n        \r\n    } "
+				},
+				"url": {
+					"raw": "http://localhost:7777/ville/103",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"ville",
+						"103"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Appel d'offre",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/Employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"Employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Appel d'offre",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 103,\r\n        \"numOffre\": \"15559874\",\r\n        \"objet\": \"xxxxxxobjetxxxx\",\r\n        \"maitreOuvrage\": {\r\n            \"id\": 2,\r\n            \"nom\": \"manal\"\r\n        },\r\n        \"nature\": \"bon de commande\",\r\n        \"documents\": [],\r\n        \"organismeCaution\": \"ddddddd\",\r\n        \"datePublication\": \"1990-01-01T00:00:00.000+00:00\",\r\n        \"dateOuverture\": \"1991-01-01T00:00:00.000+00:00\",\r\n        \"heureOuverture\": null,\r\n        \"statut\": \"Annulé\",\r\n        \"caution\": \"dddddd\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:7777/Appeloffre/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"Appeloffre",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Appel d'offre",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/Appeloffre/52",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"Appeloffre",
+						"52"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Appels d'offres",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/Appeloffre/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"Appeloffre",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prestation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"naturePrestation\":\"nature1\",\r\n        \"prixPrestations\":100,\r\n        \"appelOffre\":{\"id\":1}\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/prestation/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"prestation",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prestation",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"naturePrestation\":\"nature1\",\r\n        \"prixPrestations\":100,\r\n        \"appelOffre\":{\"id\":1}\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/prestation/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"prestation",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prestation",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"naturePrestation\":\"nature1\",\r\n        \"prixPrestations\":100,\r\n        \"appelOffre\":{\"id\":1}\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/prestation/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"prestation",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prestations",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"naturePrestation\":\"nature1\",\r\n        \"prixPrestations\":100,\r\n        \"appelOffre\":{\"id\":1}\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/prestation/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"prestation",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marchés",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/Marche/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"Marche",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Projets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/projet/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"projet",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jour ferie",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/projet/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"projet",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jour ferie",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/projet/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"projet",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jour ferie",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/jourFerie/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"jourFerie",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jour ferie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/jourFerie/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"jourFerie",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Projet",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/projet/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"projet",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Projet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/projet/add",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"projet",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Projet",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/projet/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"projet",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marché",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/Appeloffre/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"Appeloffre",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marché",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/Marche/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"Marche",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marché",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "localhost:7777/Appeloffre/",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"Appeloffre",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Documents",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/document/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"document",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Document",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/document/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"document",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Document",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/document/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"document",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Type document",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/document/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"document",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Type document",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/typeDocument",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"typeDocument"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Document",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/document/5002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"document",
+						"5002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Maitre d'ouvrage",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 1,\r\n        \"nom\": \"ait dik\"\r\n }"
+				},
+				"url": {
+					"raw": "http://localhost:7777/MaitreOuvrage/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"MaitreOuvrage",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Maitres d'ouvrage",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/MaitreOuvrage/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"MaitreOuvrage",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Maitre d'ouvrage",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"matricule\": \"M30166666\",\r\n        \"nom\": \"RABII3333\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31\",\r\n        \"dateRecrutement\": \"2020-01-01\",\r\n        \"fonction\":{\r\n        \"id\": 57\r\n         \r\n         },\r\n        \"responsable\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/MaitreOuvrage/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"MaitreOuvrage",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7777/Employee/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"Employee",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"matricule\": \"H123\",\r\n        \"nom\": \"mm\",\r\n        \"prenom\": \"Ezzemzami\",\r\n        \"cin\": \"h111\",\r\n        \"cnss\": \"113101\",\r\n        \"dateNaissance\": \"1990-01-31T00:00:00.000+00:00\",\r\n        \"dateRecrutement\": \"2020-01-01T00:00:00.000+00:00\",\r\n        \"conges\": [{\"id\":1}]\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:7777/Employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"Employee",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

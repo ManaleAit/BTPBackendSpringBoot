@@ -1,0 +1,94 @@
+server:
+  port: 7777
+
+error: 
+  debug: true
+
+
+cron: 
+  create:
+      timeSheet: 0/5 * * * * *
+      #1 0 1 JAN *
+###
+#   Database Settings
+###
+upload:
+    document:
+          path: D://s8/presentation minip/presentation stage/documents/
+          
+
+spring:
+  application:
+    name: gcm-backend-service
+  datasource:
+    #url: jdbc:h2:file:D:\data\bureauEtude
+    url: jdbc:h2:file:D:\data\bur44;DB_CLOSE_ON_EXIT=FALSE;
+    initialize: false
+    #platform: POSTGRESQL
+    username: root
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    #database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: false
+        use_sql_comments: false
+        format_sql: false
+        #hbm2ddl:
+             #import_files: RemplissageTableREf.sql
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false
+  #It looks like there's a bug in Keycloak's Spring Security integration
+  #https://stackoverflow.com/questions/53318134/unable-to-use-keycloak-in-spring-boot-2-1-due-to-duplicated-bean-registration-ht
+  main:
+    allow-bean-definition-overriding: true
+    
+#    web-application-type: none
+keycloak:
+  #realm: ecom-realm
+  #auth-server-url: http://localhost:8080/auth
+  #bearer-only: true
+  #ssl-required: none
+  #resource: first-app
+  #public-client: true
+  
+  principal-attribute: preferred__username
+  auth-server-url: http://localhost:8080/auth
+  realm: bureau_etude
+  resource: bureau-etude-backend
+  public-client: true
+  bearer-only : true
+  ssl-required : none
+  #use-resource-role-mappings: true
+  cors : true
+
+
+#Disabling actuator security
+security:
+  basic:
+    enabled: false
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
+
+springdoc:
+       swagger-ui.path: /swagger-ui-custom.html
+       swagger-ui.operationsSorter: method
+
+
