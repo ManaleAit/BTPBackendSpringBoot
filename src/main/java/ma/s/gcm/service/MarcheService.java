@@ -25,14 +25,14 @@ public class MarcheService {
         this.marcheRepository = marcheRepository;
     }
 
-    public MarcheDto findById(Long id) throws BureauEtudeException {
+    public MarcheDto findById(Long id) {
         LOGGER.debug("START SERVICE find by id {}", id);
         return Optional.ofNullable(marcheRepository.findById(id))
                 .map(v -> MarcheMapper.toDto(v.get()))
                 .orElseThrow(() -> new BureauEtudeException(ExceptionCode.API_RESOURCE_NOT_FOUND, "Marché not found"));
     }
 
-    public List<MarcheDto> findAll() throws BureauEtudeException {
+    public List<MarcheDto> findAll()  {
         LOGGER.debug("START SERVICE find all");
         return Optional.ofNullable(marcheRepository.findAll())
                 .map(MarcheMapper::toDtos)
@@ -49,7 +49,7 @@ public class MarcheService {
         
             LOGGER.debug("START SERVICE save by id {}", marcheDto.getId());
            
-            LOGGER.debug("START SERVICE save by id {}, name: {}", marcheDto.getId());
+            LOGGER.debug("START SERVICE save by id {} ", marcheDto.getId());
             
             return   marcheRepository.save(MarcheMapper.toEntity(marcheDto));
 		

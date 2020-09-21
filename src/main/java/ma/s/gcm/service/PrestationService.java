@@ -58,15 +58,16 @@ public class PrestationService {
 	}
 
 	public void delete(Long id) {
-
-		if (prestationRepository.findById(id) == null) {
+		Prestation pres = new Prestation();
+		Optional<Prestation> value = prestationRepository.findById(id);
+		if (!value.isPresent()) {
 
 			throw new BureauEtudeException(ExceptionCode.API_RESOURCE_NOT_FOUND, "Prestations not found");
 		}
 		
 		
         
-		Prestation pres=prestationRepository.findById(id).get();
+	    pres=value.get();
 		List<Facture>  factures=factureRepository.findAll();
 		for(int j=0;j<factureRepository.findAll().size();j++) {
 			

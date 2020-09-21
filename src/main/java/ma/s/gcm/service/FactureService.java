@@ -8,7 +8,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import ma.s.gcm.domain.Facture;
 import ma.s.gcm.domain.Prestation;
 import ma.s.gcm.dto.FactureDto;
@@ -27,16 +26,17 @@ public class FactureService {
 
 	private FactureRepository factureRepository;
 	private PrestationRepository prestationRepository;
+
 	@Autowired
-	public FactureService(FactureRepository factureRepository,PrestationRepository prestationRepository) {
+	public FactureService(FactureRepository factureRepository, PrestationRepository prestationRepository) {
 		this.factureRepository = factureRepository;
-		this.prestationRepository=prestationRepository;
+		this.prestationRepository = prestationRepository;
 	}
 
 	public FactureDto findById(Long id) throws BureauEtudeException {
 		LOGGER.debug("START SERVICE find by id {}", id);
-		return Optional.ofNullable(factureRepository.findById(id)).map(v -> FactureMapper.toDto(v.get())).orElseThrow(
-				() -> new BureauEtudeException(ExceptionCode.API_RESOURCE_NOT_FOUND, "Facture not found"));
+		return Optional.ofNullable(factureRepository.findById(id)).map(v -> FactureMapper.toDto(v.get()))
+				.orElseThrow(() -> new BureauEtudeException(ExceptionCode.API_RESOURCE_NOT_FOUND, "Facture not found"));
 	}
 
 	public List<FactureDto> findAll() throws BureauEtudeException {
@@ -46,46 +46,48 @@ public class FactureService {
 	}
 
 	public void delete(Long id) {
-		FactureDto facture=this.findById(id);
-		if(facture.getPrestations()!=null) {
-			for(PrestationDto obg :facture.getPrestations()) {
-				  obg.getFactures().remove(facture);
-				  prestationRepository.save(PrestationMapper.toEntity(obg));
-				  
+		FactureDto facture = this.findById(id);
+		if (facture.getPrestations() != null) {
+			for (PrestationDto obg : facture.getPrestations()) {
+				obg.getFactures().remove(facture);
+				prestationRepository.save(PrestationMapper.toEntity(obg));
+
 			}
 		}
 		LOGGER.debug("START SERVICE delete by id {}", id);
 		factureRepository.deleteById(id);
 		LOGGER.debug("START SERVICE delete by id {}", id);
 	}
-    public void deletePrestation(Long id,Facture facture) {
-    	         
-				  Prestation pres=prestationRepository.findById(id).get();
-				      Double somme=0.0;
-				      for(int i=0;i<  facture.getPrestations().size();i++) {
-				    	  if(pres.getId()==facture.getPrestations().get(i).getId()) {
-				    		  facture.getPrestations().remove(i);
-				    		  pres.getFactures().remove(facture);
-				    		  prestationRepository.save(pres);
-				    		  break;
-				    	  }
-				      }
-	    	          
-					  somme=facture.getMontantGlobale()-pres.getPrixPrestations();
-					  facture.setMontantGlobale(somme);
-					  factureRepository.save(facture);
 
-				
-			
-	
-    	
-    }
+	public void deletePrestation(Long id, Facture facture) {
+		Prestation pres = new Prestation();
+		Optional<Prestation> value = prestationRepository.findById(id);
+		if (!value.isPresent()) {
+
+			throw new BureauEtudeException(ExceptionCode.API_RESOURCE_NOT_FOUND, "la prestation n'existe pas");
+		}
+	    pres = value.get();
+		Double somme = 0.0;
+		for (int i = 0; i < facture.getPrestations().size(); i++) {
+			if (pres.getId() == facture.getPrestations().get(i).getId()) {
+				facture.getPrestations().remove(i);
+				pres.getFactures().remove(facture);
+				prestationRepository.save(pres);
+				break;
+			}
+		}
+
+		somme = facture.getMontantGlobale() - pres.getPrixPrestations();
+		facture.setMontantGlobale(somme);
+		factureRepository.save(facture);
+
+	}
+
 	public void save(FactureDto factureDto) throws BureauEtudeException {
-               
-				LOGGER.debug("START SERVICE save by id {}", factureDto.getId());
-				factureRepository.save(FactureMapper.toEntity(factureDto));
-				LOGGER.debug("START SERVICE save by id {}", factureDto.getId());
-			
+
+		LOGGER.debug("START SERVICE save by id {}", factureDto.getId());
+		factureRepository.save(FactureMapper.toEntity(factureDto));
+		LOGGER.debug("START SERVICE save by id {}", factureDto.getId());
 
 	}
 }

@@ -30,10 +30,10 @@ public class EmployeeService {
 		return Optional.ofNullable(employeeRepository.findById(id)).map(v -> EmployeeMapper.toDto(v.get())).orElseThrow(
 				() -> new BureauEtudeException(ExceptionCode.API_RESOURCE_NOT_FOUND, "Employee not found"));
 	}
-	
+
 	public EmployeeDto findByMatricule(String matricule) throws BureauEtudeException {
 		LOGGER.debug("START SERVICE find by matricule {}", matricule);
-		return  EmployeeMapper.toDto(employeeRepository.findByMatricule(matricule));
+		return EmployeeMapper.toDto(employeeRepository.findByMatricule(matricule));
 	}
 
 	public EmployeeDto findByEmail(String email) throws BureauEtudeException {
@@ -43,12 +43,22 @@ public class EmployeeService {
 
 	public List<EmployeeDto> findAll() throws BureauEtudeException {
 		LOGGER.debug("START SERVICE find all");
+
 		return Optional.ofNullable(employeeRepository.findAll()).map(EmployeeMapper::toDtos).orElseThrow(
 				() -> new BureauEtudeException(ExceptionCode.API_RESOURCE_NOT_FOUND, "Employees not found"));
 	}
 
-	public void delete(Long id) {
-		Employee employee = employeeRepository.findById(id).get();
+	public void delete(Long id) throws BureauEtudeException {
+		Employee employee = new Employee();
+		Optional<Employee> value = employeeRepository.findById(id);
+		if (!value.isPresent()) {
+
+			throw new BureauEtudeException(ExceptionCode.API_RESOURCE_NOT_FOUND, " l'employee n'existe pas");
+		} else {
+		
+			employee = value.get();
+		}
+
 		if (employee != null) {
 			List<Employee> empls = employeeRepository.findByResponsable(employee.getId());
 			for (Employee emp : empls) {

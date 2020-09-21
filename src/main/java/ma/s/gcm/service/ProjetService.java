@@ -47,7 +47,7 @@ public class ProjetService {
     public void save(ProjetDto projetDto) {
         LOGGER.debug("START SERVICE save by id {}", projetDto.getId());
         projetRepository.save(ProjetMapper.toEntity(projetDto));
-        LOGGER.debug("START SERVICE save by id {}, name: {}", projetDto.getId());
+        LOGGER.debug("START SERVICE save by id {} ", projetDto.getId());
     }
 }
 

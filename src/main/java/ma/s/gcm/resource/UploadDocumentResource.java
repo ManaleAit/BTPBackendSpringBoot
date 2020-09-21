@@ -31,7 +31,6 @@ public class UploadDocumentResource {
 
 	private final UploadDocumentService uploadDocumentService;
 
-	
 	public UploadDocumentResource(UploadDocumentService uploadDocumentService) {
 		this.uploadDocumentService = uploadDocumentService;
 	}
@@ -51,15 +50,17 @@ public class UploadDocumentResource {
 
 	@GetMapping("/{id}")
 
-	public ResponseEntity<ByteArrayResource> downloadFile(@PathVariable("id") Long id, HttpServletRequest request) throws IOException {
+	public ResponseEntity<ByteArrayResource> downloadFile(@PathVariable("id") Long id, HttpServletRequest request)
+			throws IOException {
 
-		String str=uploadDocumentService.getDoc(id);
+		String str = uploadDocumentService.getDoc(id);
 		Path path = Paths.get(str);
-		String mineType = "application/"+str.substring(str.lastIndexOf('.') + 1);
+		String mineType = "application/" + str.substring(str.lastIndexOf('.') + 1);
 		byte[] data = Files.readAllBytes(path);
 		ByteArrayResource resource = new ByteArrayResource(data);
-		return ResponseEntity.ok().header(HttpHeaders.CONTENT_DISPOSITION, "attachment;filename=" + path.getFileName().toString()).contentType(MediaType.parseMediaType(mineType)).contentLength(data.length).body(resource);
-	
+		return ResponseEntity.ok()
+				.header(HttpHeaders.CONTENT_DISPOSITION, "attachment;filename=" + path.getFileName().toString())
+				.contentType(MediaType.parseMediaType(mineType)).contentLength(data.length).body(resource);
 
 	}
 

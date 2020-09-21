@@ -57,7 +57,7 @@ public class AppelOffreService {
 			throw new BureauEtudeException(ExceptionCode.API_DATE_NULL, " le maitre ouvrage ne doit pas etre null");
 		}
 
-		if (maitreOuvrageRepository.findById(appelOffreDto.getMaitreOuvrage().getId()) == null) {
+		if (!maitreOuvrageRepository.findById(appelOffreDto.getMaitreOuvrage().getId()).isPresent()) {
 
 			throw new BureauEtudeException(ExceptionCode.API_RESOURCE_NOT_FOUND, " le maitre ouvrage n'existe pas");
 		}

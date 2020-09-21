@@ -45,7 +45,7 @@ public class CongeService {
 			throw new BureauEtudeException(ExceptionCode.API_RESOURCE_NOT_FOUND, "congés not found");
 		}
 	}
-	
+
 	public List<CongeDto> findDemandeConge() throws BureauEtudeException {
 		try {
 			LOGGER.debug("START SERVICE find all");
@@ -67,7 +67,7 @@ public class CongeService {
 	}
 
 	public void delete(Long id) throws BureauEtudeException {
-		if (congeRepository.findById(id) == null) {
+		if (!congeRepository.findById(id).isPresent()) {
 
 			throw new BureauEtudeException(ExceptionCode.API_RESOURCE_NOT_FOUND, "Prestations not found");
 		}

@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,6 +16,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import ma.s.gcm.domain.Document;
+import ma.s.gcm.exception.BureauEtudeException;
+import ma.s.gcm.exception.ExceptionCode;
 import ma.s.gcm.repository.DocumentRepository;
 import ma.s.gcm.repository.TypeDocumentRepository;
 
@@ -24,12 +27,12 @@ public class UploadDocumentService {
 
 	private DocumentRepository documentRepository;
 
-	private TypeDocumentRepository TypedocumentRepository;
+	private TypeDocumentRepository typedocumentRepository;
 
 	@Autowired
 	public UploadDocumentService(DocumentRepository documentRepository, TypeDocumentRepository TypedocumentRepository) {
 		this.documentRepository = documentRepository;
-		this.TypedocumentRepository = TypedocumentRepository;
+		this.typedocumentRepository = TypedocumentRepository;
 	}
 
 	@Value("${upload.document.path}")
@@ -48,7 +51,7 @@ public class UploadDocumentService {
 			inputStream = file.getInputStream();
 
 			if (!newFile.exists()) {
-				newFile.createNewFile();
+				 newFile.createNewFile();
 			}
 			outputStream = new FileOutputStream(newFile);
 			int read = 0;
@@ -58,14 +61,26 @@ public class UploadDocumentService {
 				outputStream.write(bytes, 0, read);
 			}
 			inputStream.close();
-			outputStream.close();
-			Document doc = documentRepository.findById(id).get();
+
+			Document doc = new Document();
+			Optional<Document> value = documentRepository.findById(id);
+			if (!value.isPresent()) {
+
+				throw new BureauEtudeException(ExceptionCode.API_RESOURCE_NOT_FOUND, " le document n'existe pas");
+			}
+			doc = value.get();
 			doc.setPath(path + id + "." + extension);
 			documentRepository.save(doc);
 			return true;
 		} catch (IOException e) {
 			e.printStackTrace();
 
+		} finally {
+			try {
+				outputStream.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 
 		return false;
@@ -74,8 +89,14 @@ public class UploadDocumentService {
 
 	public boolean DeleteFile(Long id) throws IOException {
 
-		if (documentRepository.findById(id) != null) {
-			String str = documentRepository.findById(id).get().getPath();
+		if (documentRepository.findById(id).isPresent()) {
+			Document doc = new Document();
+			Optional<Document> value = documentRepository.findById(id);
+			if (!value.isPresent()) {
+
+				throw new BureauEtudeException(ExceptionCode.API_RESOURCE_NOT_FOUND, " le document n'existe pas");
+			}
+			String str = value.get().getPath();
 
 			String name = id + "." + str.substring(str.lastIndexOf('.') + 1);
 			try {
@@ -91,9 +112,14 @@ public class UploadDocumentService {
 
 	}
 
-	public String getDoc(Long id) {
+	public String getDoc(Long id) throws BureauEtudeException {
+		Document doc = new Document();
+		Optional<Document> value = documentRepository.findById(id);
+		if (!value.isPresent()) {
 
-		Document doc = documentRepository.findById(id).get();
+			throw new BureauEtudeException(ExceptionCode.API_RESOURCE_NOT_FOUND, " le document n'existe pas");
+		}
+		doc = value.get();
 		if (doc != null) {
 			return doc.getPath();
 		}

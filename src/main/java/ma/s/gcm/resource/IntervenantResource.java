@@ -65,7 +65,7 @@ private static final Logger LOGGER = LoggerFactory.getLogger(IntervenantResource
     public IntervenantDto get(@PathVariable Long id) throws BureauEtudeException {
         LOGGER.debug("START RESOURCE find Intervenant by id : {}", id);
         IntervenantDto IntervenantDto = intervenantService.findById(id);
-        LOGGER.debug("END RESOURCE find Intervenant by id : {}, name :{}", id);
+        LOGGER.debug("END RESOURCE find Intervenant by id : {} ", id);
         return IntervenantDto;
     }
 

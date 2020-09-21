@@ -48,7 +48,7 @@ public class IntervenantService {
 	}
 
 	public void delete(Long id) {
-		if (intervenantRepository.findById(id) == null) {
+		if (!intervenantRepository.findById(id).isPresent()){
 
 			throw new BureauEtudeException(ExceptionCode.API_RESOURCE_NOT_FOUND, "Intervenant not found");
 		}
