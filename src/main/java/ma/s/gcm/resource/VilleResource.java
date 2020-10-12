@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("/ville")
+@RequestMapping("/Ville")
 @PreAuthorize("isAuthenticated()")
 public class VilleResource {
 
@@ -24,7 +24,7 @@ public class VilleResource {
     public VilleResource(VilleService villeService) {
         this.villeService = villeService;
     }
-    @PreAuthorize("hasRole('ROLE_assistant')")
+   @PreAuthorize("hasRole('ROLE_assistant')")
     @PostMapping
     @JsonView(UserView.Basic.class)
     public void add(@RequestBody VilleDto villeDto) throws BureauEtudeException {
@@ -49,7 +49,7 @@ public class VilleResource {
         LOGGER.debug("END RESOURCE find city by id : {}, name :{}", id, villeDto.getLibelle());
         return villeDto;
     }
-
+   // @PreAuthorize("hasRole('ROLE_assistant')")
     @GetMapping
     @JsonView(UserView.Basic.class)
     public List<VilleDto> getAll() throws BureauEtudeException {

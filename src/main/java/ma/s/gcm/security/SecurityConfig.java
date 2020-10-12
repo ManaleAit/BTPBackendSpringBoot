@@ -57,6 +57,7 @@ protected void configure(HttpSecurity http) throws Exception
             .antMatchers("/projet/**").hasAnyRole("assistant","responsable")
             .antMatchers("/typeDocument/**").hasAnyRole("assistant","responsable")
             .anyRequest().authenticated();
+    http.cors().and().csrf().disable();
 }
 
 /*
